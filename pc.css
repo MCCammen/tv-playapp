@@ -1,0 +1,414 @@
+/* common */
+* {
+    margin: 0;
+    padding: 0;
+    /* 去掉高亮显示 */
+    -webkit-tap-highlight-color: transparent;
+    /*  CSS3的盒子模型 */
+    box-sizing: border-box;
+}
+
+body {
+    /* 百分比布局 */
+    width: 100%;
+	/* 字体大小 */
+    font-size: 14px;
+	/* 字体颜色 */
+    color: #666;
+	/* 字体样式 */
+    font-family: "Microsoft Yahei", sans-serif;
+	/* 最小宽 */
+    min-width: 320px;
+	/* 最大宽 */
+    max-width: 640px;
+	/* 居中 */
+    margin: 0 auto;
+	/* body的高 */
+	height: 2900px;
+}
+
+a {
+	/* 颜色 */
+    color: #333;
+	/* 没有文本装饰 */
+    text-decoration: none;
+}
+
+a:hover {
+	/* 没有文本装饰 */
+    text-decoration: none;
+}
+
+ul , ol {
+	/* 清除列表样式，去除实心圆 */
+    list-style: none;
+}
+
+input {
+	/* 没有border */
+    border: none;
+	/*表示使outline属性无效，使绘制于元素周围的一条线无效  */
+    outline: none;
+}
+
+/* 清除浮动 */
+.clearfix::before, 
+.clearfix::after {
+	/* 插入生成内容 */
+    content: '';
+	/* 一个块级元素， */
+    display: block;
+    height: 0;
+	/* 设置不可见 */
+    visibility: hidden;
+	/* 清除浮动 */
+    clear: both;
+	left: 50%;
+	transform: translateX(-50%);
+}
+/* header */
+header{
+	width: 100%;
+	position: relative;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	min-width: 320px;
+	max-width: 640px;
+	height: 20%;
+	/* background-color: #333333; */
+}
+header>div{
+	display: flex;
+	width: 100%;
+	height: 600px;
+	flex-direction: column;
+	justify-content: left;
+}
+header-1{
+	min-width: 320px;
+	max-width: 40rem;
+	position: fixed;
+	top: 0;
+	z-index: 999;
+}
+header-1>a{
+	min-width: 320px;
+	max-width: 40rem;
+	width:100%;
+	height: 55px;
+	box-shadow: 1px 1.5px 1px #d6d6d6;
+	border-radius: 3px;
+	/* display: flex; */
+	background-color: white;
+	position: fixed;	
+}
+header>div>.header-1{
+	margin-top: 70px;
+	width: 100%;
+	flex-direction: column;
+	align-items: center;
+}
+header>div>.header-1>strong{
+	width: 100%;
+	height: 40px;
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	font-size: 25px;
+}
+header>div>.header-1>span{
+	width: 100%;
+	height: 30px;
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	font-size: 18px;
+}
+header>div>.header-2{
+	display: flex;
+	width: 100%;
+	height: 1000px;
+}
+header>div>.header-2>.header-3{
+	flex: 1.5;
+	display: flex;
+}
+header>div>.header-2>.header-3>img{
+	flex: 1;
+	display: flex;
+	margin: 40px;
+	/* width: 100px; */
+	height: 400px;
+}
+header>div>.header-2>.header-4{
+	flex: 1;
+	/* float: 1; */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 40px;
+}
+header>div>.header-2>.header-4>span{
+	flex: 1;
+	height: 30px;
+	display: flex;
+	color: #333333;
+	font-size: 20px;
+	flex-direction: row;
+	justify-content: flex-end;
+	margin:top;
+}
+header>div>.header-2>.header-4>strong{
+	flex: 10;
+	height: 100px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	color: #333333;
+	font-size: 60px;
+}
+header>div>.header-2>.header-4>.more{
+	flex:40;
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	justify-content: center;
+}
+header>div>.header-2>.header-4>.more>.more-1{
+	/* height: 30px; */
+	width: 100%;
+	color: #666666;
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	justify-content: center;
+}
+header>div>.header-2>.header-4>.more>.more-1>p{
+	margin: 8px;
+	color: #878787;
+	font-size: 17px;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	display: -webkit-box;
+	overflow: hidden;
+}
+header>div>.header-2>.header-4>.more>.more-2{
+	margin-top: 20px;
+	width: 100%;
+	min-width: 100px;
+	height: 40px;
+	border: 1.2px solid #333333;
+	border-radius: 3px;
+	font-size: 20px;
+	text-align: center;
+	padding: 4px;
+}
+header>.header-5{
+	/* width: 80%; */
+	height: 1px;
+	text-align: center;
+	/* margin-left: 40px; */
+	color: #C0C0C0;
+}
+banner{
+	margin-left: 20px;
+	margin-right: 20px;
+	width: 100%;
+	height: 400px;
+	display: flex;
+	min-width: 320px;
+	max-width: 640px;
+	margin-top: 40px;
+}
+banner>div>.bannerbox1{
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+banner>div>.bannerbox1>p{
+	height: 25px;
+	width: 93%;
+	font-size: 16px;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	display: -webkit-box;
+	overflow: hidden;
+}
+banner>div>.bannerbox2{
+	margin-top: 20px;
+	display: flex;
+	width: 100%;
+	height: 300px;
+}
+banner>div>.bannerbox2>a>img{
+	display: flex;
+	width: 93%;
+	height: 300px;
+}
+mest{
+	width: 100%;
+	height: 50px;
+	min-width: 320px;
+	max-width: 640px;
+}
+mest>.zj{
+	width: 100%;
+}
+mest>.zj>ul{
+	width: 100%;
+}
+mest>.zj>ul>li{
+	width: 20%;
+	position: relative;
+	float: left;
+	text-align: center;
+	height: 40px;
+	font-size: 20px;
+	/* top: 20px; */
+	color: #878787;
+}
+mest>.zj>ul>li:nth-child(2),li:nth-child(3),li:nth-child(4){
+	width: 20%;
+	float: left;
+	text-align: center;
+	height: 40px;
+	font-size: 20px;
+	top: 15px;
+	
+}
+mest>.zj>ul>li>span{
+	width: 100%;
+	float: left;
+	text-align: center;
+	height: 40px;
+	font-size: 20px;
+	top: 15px;
+	color: #ccc;
+	cursor: pointer;
+}
+mest>.zj>ul>li>span:hover{
+	color: #333333;
+	width: 100%;
+	float: left;
+	text-align: center;
+	height: 40px;
+	font-size: 20px;
+	top: 15px;
+}
+footer{
+	margin-top: 100px;
+	height: 2650px;
+	/* background-color: #8b8bd1; */
+	display: flex;
+	max-width: 320px;
+	max-width: 640px;
+}
+footer>div{
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+footer>div>.zb{
+	height: 95%;
+	width: 3px;
+	display: flex;
+	border: 2.5px solid #c0c0c0;
+}
+footer>div>.yb{
+	height: 100%;
+	color: #333333;
+	/* display: flex; */
+	flex: 1;
+}
+footer>div>.yb>div{
+	width: 100%;
+	height: 180px;
+	display: flex;
+	flex-direction: row;
+	flex: 1;
+}
+ footer>div>.yb>div>{
+	 width: 100%;
+	 display: flex;
+	 flex-direction: column;
+ }
+ footer>div>.yb>div>.fa{
+ 	 /* width: 100%; */
+ 	 /* display: flex; */
+	width: 13px;
+	height: 2px;
+	border: 2.5px solid #C0C0C0;
+	margin-top: 0px;
+	dis
+ 	 /* flex-direction: column; */
+ }
+ footer>div>.yb>div>.ff1{
+	 display: flex;
+	 flex-direction: column;
+	 flex: 1;
+ }
+ footer>div>.yb>div>.ff2{
+ 	 display: flex;
+ 	 flex-direction: column;
+	 height: 150px;
+	 width: 280px;
+ }
+footer>div>.yb>div>.ff1>p{
+	color: #cda547;
+	margin-top:-10px;
+	margin-left: 10px;
+	font-size: 20px;
+}
+footer>div>.yb>div>.ff1>strong{
+	color:#333333;
+	margin-top:-10px;
+	margin-left: 10px;
+	margin-top: 10px;
+	font-size: 20px;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	display: -webkit-box;
+	overflow: hidden;
+}
+footer>div>.yb>div>.ff1>span{
+	color:#333333;
+	margin-top:-10px;
+	margin-left: 10px;
+	margin-top: 2px;
+	font-size: 15px;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	display: -webkit-box;
+	overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
